@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: fwdyxdhos-java-quarkus-gitops
+  description: This is GitOps manifest for fwdyxdhos-java-quarkus   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: fwdyxdhos-java-quarkus
+    janus-idp.io/tekton: fwdyxdhos-java-quarkus 
+    backstage.io/kubernetes-id: fwdyxdhos-java-quarkus 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:fwdyxdhos-java-quarkus
